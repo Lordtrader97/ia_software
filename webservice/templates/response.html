@@ -1,0 +1,20 @@
+
+{% if good_client %}
+<p>
+Apreciado <strong>{{nombre}}</strong>, su crédito por valor de <strong>$US {{credit_amount}}</strong> fue aprobado. 
+</p>
+<p>
+Nuestro sistema sugiere que usted tiene una probabilidad de {{proba}} de pagar el crédito.
+</p>
+{% else %}
+<p>
+Apreciado <strong>{{nombre}}</strong>, su crédito no fue aprobado. 
+</p>
+<p>
+Nuestro sistema sugiere que usted tiene probabilidad de {{proba}} de No pagar el crédito.
+</p>
+{% endif %}
+
+
+
+
