@@ -1,0 +1,184 @@
+Last login: Thu Nov  4 18:24:35 on ttys000
+(base) harryhernandez@Mac-mini-de-Harry ai-service % ls
+env			models			requirements.txt	server.py
+(base) harryhernandez@Mac-mini-de-Harry ai-service %  cd ..
+(base) harryhernandez@Mac-mini-de-Harry ia_software % ls
+ai-service	docs		docs 2		front		webservice
+(base) harryhernandez@Mac-mini-de-Harry ia_software % cd webservice 
+(base) harryhernandez@Mac-mini-de-Harry webservice % source env/bin/activate
+(env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Nov/2021 20:15:05] "POST /credit/v2 HTTP/1.1" 404 -
+[2021-11-04 20:15:27,245] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 39, in predict2
+    name = content['nombre']
+KeyError: 'nombre'
+127.0.0.1 - - [04/Nov/2021 20:15:27] "POST /credit/predict/v2 HTTP/1.1" 500 -
+127.0.0.1 - - [04/Nov/2021 20:17:02] "POST /credit/predict/v2 HTTP/1.1" 400 -
+[2021-11-04 20:17:13,803] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:17:13] "POST /credit/predict/v2 HTTP/1.1" 500 -
+[2021-11-04 20:18:37,104] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:18:37] "POST /credit/predict/v2 HTTP/1.1" 500 -
+[2021-11-04 20:22:07,009] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:22:07] "POST /credit/predict/v2 HTTP/1.1" 500 -
+^X^C%                                                                                                                                                          (env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+[2021-11-04 20:22:23,759] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:22:23] "POST /credit/predict/v2 HTTP/1.1" 500 -
+^X^C%                                                                                                                                                          (env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+[2021-11-04 20:22:46,470] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:22:46] "POST /credit/predict/v2 HTTP/1.1" 500 -
+^C%                                                                                                                                                            (env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+[2021-11-04 20:23:08,131] ERROR in app: Exception on /credit/predict/v2 [POST]
+Traceback (most recent call last):
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "webserver.py", line 42, in predict2
+    amount = int(content['credit_amount'])
+KeyError: 'credit_amount'
+127.0.0.1 - - [04/Nov/2021 20:23:08] "POST /credit/predict/v2 HTTP/1.1" 500 -
+^X^C%                                                                                                                                                          (env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+<Response [200]>
+{'prediction': {'bad_score_proba': 0.44565217391304346, 'good_score_proba': 0.5543478260869565}}
+127.0.0.1 - - [04/Nov/2021 20:23:32] "POST /credit/predict/v2 HTTP/1.1" 200 -
+^C%                                                                                                                                                            (env) (base) harryhernandez@Mac-mini-de-Harry webservice % pip install flask-cors
+Collecting flask-cors
+  Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting Six
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: Flask>=0.9 in ./env/lib/python3.8/site-packages (from flask-cors) (2.0.2)
+Requirement already satisfied: click>=7.1.2 in ./env/lib/python3.8/site-packages (from Flask>=0.9->flask-cors) (8.0.3)
+Requirement already satisfied: Werkzeug>=2.0 in ./env/lib/python3.8/site-packages (from Flask>=0.9->flask-cors) (2.0.2)
+Requirement already satisfied: Jinja2>=3.0 in ./env/lib/python3.8/site-packages (from Flask>=0.9->flask-cors) (3.0.2)
+Requirement already satisfied: itsdangerous>=2.0 in ./env/lib/python3.8/site-packages (from Flask>=0.9->flask-cors) (2.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./env/lib/python3.8/site-packages (from Jinja2>=3.0->Flask>=0.9->flask-cors) (2.0.1)
+Installing collected packages: Six, flask-cors
+Successfully installed Six-1.16.0 flask-cors-3.0.10
+WARNING: You are using pip version 21.2.4; however, version 21.3.1 is available.
+You should consider upgrading via the '/Users/harryhernandez/Desktop/Escritorio_Agosto/electiva software inteligente/ia_software/webservice/env/bin/python -m pip install --upgrade pip' command.
+(env) (base) harryhernandez@Mac-mini-de-Harry webservice % python webserver.py   
+ * Serving Flask app 'webserver' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://100.111.26.37:8080/ (Press CTRL+C to quit)
+<Response [200]>
+{'prediction': {'bad_score_proba': 0.44565217391304346, 'good_score_proba': 0.5543478260869565}}
+127.0.0.1 - - [04/Nov/2021 20:42:52] "POST /credit/predict/v2 HTTP/1.1" 200 -
+
