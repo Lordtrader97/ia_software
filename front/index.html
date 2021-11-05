@@ -1,0 +1,62 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<div id="app">
+
+<div>
+Nombre: <input type="text" name="nombre" /> 
+</div>
+
+<div>
+Edad: <input type="text"  name="age" />
+</div>
+
+<div>
+Tipo Priopietario:
+<select name="housing">
+<option value="free">Ninguna</option>
+<option value="rent">En arriendo</option>
+<option value="own">Propietario</option>
+</select>
+</div>
+
+<div>
+Valor del prestamo: <input type="text" name="credit_amount" />
+</div>
+
+<div>
+<button v-on:click="clickme">Aceptar</button> 
+</div>
+
+</div>
+<script> 
+var app = new Vue({
+  el: '#app',
+  data: {
+  	nombre:'',
+  	credit_amount:'',
+  	age:'',
+  	housing:''
+  	  },
+  methods:{
+  	clickme:function(){
+		let that=this;
+  		this.message='ciao';
+  		console.log(this.nombre);
+  		console.log(this.age);
+  		console.log(this.housing);
+  		console.log(this.credit_amount);
+		axios.post('http://127.0.0.1:8080/credit/predict/v2',{"nombre":this.nombre,"age":this.age,"housing":this.housing,credit_amount:this.credit_amount})
+		.then(function(response){
+		console.log(response);
+		
+
+		}
+		);
+		
+
+  	},
+
+  	}
+
+})
+</script>
