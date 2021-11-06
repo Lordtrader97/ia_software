@@ -15,7 +15,7 @@ def predict():
     name = request.form.get('nombre')
     age = int(request.form.get('age'))
     housing = request.form.get('housing')
-    amount = int(request.form.get('amount'))
+    amount = int(request.form.get('credit_amount'))
 
     response = requests.post(f"http://{ip_ai_server}:5000/servicioai", 
                         json={"age": age, "housing": housing,"amount": amount})
